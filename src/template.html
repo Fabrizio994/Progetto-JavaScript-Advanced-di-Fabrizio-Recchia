@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1>noooo</h1>
-    <h2>siiii</h2>
-    <h3>nijiasdo</h3>
-    <h4>sdkafcouisdji</h4>
-    <h5>le murt tu</h5>
+    <header>
+      <h1>Search ur book</h1>
+    </header>
+
+    <div class="main">
+      <form method="get" class="search-bar" id="searchForm">
+        <input id="search" type="text" placeholder="Search by category" />
+        <button type="submit">
+          <img src="assets/img/search.png" alt="Search icon" />
+        </button>
+      </form>
+    </div>
+
+    <!--category fo images and description-->
+    <div id="categoryImages"></div>
+
+    <!--JS-->
+    <script type="module" src="index.js"></script>
   </body>
 </html>

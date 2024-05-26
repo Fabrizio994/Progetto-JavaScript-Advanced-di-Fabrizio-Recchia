@@ -1,12 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: "development",
-  entry: { bundle: path.resolve(__dirname, "src/index.js") },
+  mode: "production",
+  entry: { index: "./src/js/index.js" },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    clean: true,
   },
 
   devServer: {
@@ -22,7 +21,14 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
       },
       {
         test: /\.js$/,
