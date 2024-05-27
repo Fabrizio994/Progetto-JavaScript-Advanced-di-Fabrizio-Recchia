@@ -1,3 +1,4 @@
+import "../css/style.scss";
 function handleNoResults() {
   const categoryImageContainer = document.getElementById("categoryImages");
   categoryImageContainer.innerHTML = "";
