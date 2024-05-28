@@ -1,6 +1,10 @@
-body {
-  background-color: red;
-  h1 {
-    color: green;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.btn {
+  img {
+    width: 10px;
   }
 }

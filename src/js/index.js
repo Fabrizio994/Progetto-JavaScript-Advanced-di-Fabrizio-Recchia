@@ -1,4 +1,11 @@
 import "../css/style.scss";
+import Search from "../img/search.png";
+
+const button = document.querySelector("#btn");
+const imgSearch = new Image();
+imgSearch.src = Search;
+
+button.appendChild(imgSearch);
 function handleNoResults() {
   const categoryImageContainer = document.getElementById("categoryImages");
   categoryImageContainer.innerHTML = "";
