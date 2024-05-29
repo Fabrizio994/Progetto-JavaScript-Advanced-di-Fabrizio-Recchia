@@ -3,8 +3,34 @@
   padding: 0;
   margin: 0;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .btn {
   img {
     width: 10px;
+  }
+}
+
+#categoryImages {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+
+  .card-body {
+    height: 60vh;
+    width: 25%;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 10px;
+
+    .card-img-top {
+      margin-bottom: 20px;
+      height: 70%;
+    }
   }
 }
