@@ -1,5 +1,5 @@
 import "../css/style.scss";
-import Search from "../img/search.png";
+//import favicon from "../img/favicon.ico";
 
 /*const button = document.querySelector("button");
 const imgSearch = new Image();
@@ -18,7 +18,8 @@ function handleNoResults() {
   alert("No result!");
 }
 async function fetchData(categories) {
-  // Funzione asincrona per recuperare i dati dalla API
+  document.getElementById("spinner").style.display = "block";
+
   try {
     const response = await axios.get(
       `https://openlibrary.org/subjects/${categories}.json?limit=30`
@@ -28,6 +29,8 @@ async function fetchData(categories) {
     alert("error");
     handleNoResults();
     throw error;
+  } finally {
+    document.getElementById("spinner").style.display = "none";
   }
 }
 
