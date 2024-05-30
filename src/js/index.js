@@ -1,11 +1,19 @@
 import "../css/style.scss";
-//import favicon from "../img/favicon.ico";
+import favicon from "../img/favicon.ico";
+import ogImage from "../img/imgog.png";
 
-/*const button = document.querySelector("button");
-const imgSearch = new Image();
-imgSearch.src = Search;
+const ogMeta = document.createElement("meta");
+ogMeta.setAttribute("property", "og:image");
+ogMeta.setAttribute("content", ogImage);
 
-button.appendChild(imgSearch);*/
+document.head.appendChild(ogMeta);
+
+const icon = document.createElement("link");
+icon.rel = "icon";
+icon.type = "image/x-icon";
+icon.href = favicon;
+document.head.appendChild(icon);
+
 function handleNoResults() {
   const categoryImageContainer = document.getElementById("categoryImages");
   categoryImageContainer.innerHTML = "";
